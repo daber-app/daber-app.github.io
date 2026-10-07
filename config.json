@@ -3,5 +3,17 @@
     "force": true,
     "minimumVersion": { "ios": null, "android": null }
   },
-  "messages": []
+  "messages": [
+    {
+      "id": "test-2026-10-07",
+      "title": { "fr": "Test des pop-ups", "he": "בדיקת הודעות" },
+      "body": { "fr": "Si tu vois ce message, les pop-ups programmables fonctionnent.", "he": "אם ההודעה הזאת מופיעה, ההודעות המתוזמנות עובדות." },
+      "button": { "fr": "Voir les textes", "he": "לטקסטים" },
+      "icon": "sparkles",
+      "action": "tab:texts",
+      "end": "2026-10-07",
+      "minVersion": "1.1.1",
+      "repeat": "always"
+    }
+  ]
 }
