@@ -1,0 +1,7 @@
+{
+  "update": {
+    "force": true,
+    "minimumVersion": { "ios": null, "android": null }
+  },
+  "messages": []
+}
