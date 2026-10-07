@@ -3,5 +3,22 @@
     "force": true,
     "minimumVersion": { "ios": null, "android": null }
   },
-  "messages": []
+  "messages": [
+    {
+      "id": "bienvenue-1.1.1",
+      "title": {
+        "fr": "Bienvenue dans la mise à jour 1.1.1 !",
+        "he": "ברוכים הבאים לעדכון 1.1.1!"
+      },
+      "body": {
+        "fr": "Quoi de neuf ?\n\n• Exercices de grammaire aux réponses mélangées\n• Hébreu sans nekoudot encore plus juste : מיהר, שירות, אירוע…\n• 175 corrections de contenu\n• Révisions plus efficaces : tes erreurs et tes mots en cours reviennent toujours\n• Interface en hébreu et accessibilité améliorées",
+        "he": "מה חדש?\n\n• תשובות מעורבבות בתרגילי הדקדוק\n• כתיב מלא מדויק יותר: מיהר, שירות, אירוע…\n• 175 תיקוני תוכן\n• חזרות יעילות יותר: הטעויות והמילים שבלמידה תמיד חוזרות\n• ממשק בעברית ונגישות משופרים"
+      },
+      "button": { "fr": "C'est parti !", "he": "יאללה!" },
+      "icon": "sparkles",
+      "minVersion": "1.1.1",
+      "maxVersion": "1.1.1",
+      "repeat": "once"
+    }
+  ]
 }
