@@ -9,6 +9,8 @@
   "messages": [
     {
       "id": "bienvenue-1.1.1",
+      "type": "update",
+      "version": "1.1.1",
       "title": {
         "fr": "Bienvenue dans la mise à jour 1.1.1 !",
         "he": "ברוכים הבאים לעדכון 1.1.1!"
@@ -21,10 +23,7 @@
         "fr": "C'est parti !",
         "he": "יאללה!"
       },
-      "icon": "sparkles",
-      "minVersion": "1.1.1",
-      "maxVersion": "1.1.1",
-      "repeat": "once"
+      "icon": "sparkles"
     }
   ]
 }
