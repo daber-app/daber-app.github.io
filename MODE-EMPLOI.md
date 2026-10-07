@@ -67,7 +67,7 @@ Les pop-ups se placent dans la liste `"messages": [ … ]`, séparées par des v
 | `title`, `body` | au moins l'un des deux | Texte en français (`fr`) et en hébreu (`he`). Dans le texte, `\n` passe à la ligne, et une ligne qui commence par `• ` s'affiche en liste. |
 | `button` | non | Texte du bouton. « OK » par défaut. |
 | `icon` | non | Icône : `sparkles`, `gift.fill`, `star.fill`, `bell.fill`, `book.fill`, `heart.fill`, `megaphone.fill`, `flame.fill`, `crown.fill`, `calendar`. ✨ par défaut. |
-| `action` | non | Ce que fait le bouton : `premium` (écran Premium, seulement pour les non-abonnés), `tab:today`, `tab:review`, `tab:grammar`, `tab:texts`, `tab:explorer`, ou un lien `https://…`. Sans action, le bouton ferme la pop-up. |
+| `action` | non | Ce que fait le bouton : `premium` (écran Premium, seulement pour les non-abonnés), `placement` (ouvre le test de niveau), `tab:today`, `tab:review`, `tab:grammar`, `tab:texts`, `tab:explorer`, ou un lien `https://…`. Sans action, le bouton ferme la pop-up. |
 | `start`, `end` | non | Période d'affichage. Accepte un jour (`"2026-12-04"`) ou une heure précise (`"2026-12-04T18:00:00+02:00"`). Pour un jour seul, `start` commence à 0 h et `end` finit à 23 h 59, heure du téléphone. **Une date mal écrite fait ignorer la pop-up.** |
 | `repeat` | non | `once` : une seule fois (par défaut). `daily` : une fois par jour. `weekly` : une fois par semaine. `always` : à chaque ouverture. |
 | `audience` | non | `all` (par défaut), `free` (non-abonnés seulement) ou `premium` (abonnés seulement). |

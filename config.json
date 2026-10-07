@@ -24,6 +24,25 @@
         "he": "יאללה!"
       },
       "icon": "sparkles"
+    },
+    {
+      "id": "test-niveau-1.1.1",
+      "type": "update",
+      "version": "1.1.1",
+      "title": {
+        "fr": "Un test de niveau plus précis 🎯",
+        "he": "מבחן רמה מדויק יותר 🎯"
+      },
+      "body": {
+        "fr": "On a retravaillé les niveaux : le test te place maintenant beaucoup plus justement.\n\n• 24 questions qui s'adaptent à tes réponses\n• Plus de mots trop faciles à deviner\n• Environ 3 minutes\n\nTes mots appris et ta progression sont conservés.",
+        "he": "שיפרנו את הרמות: המבחן ממקם עכשיו בצורה הרבה יותר מדויקת.\n\n• 24 שאלות שמתאימות את עצמן לתשובות שלך\n• בלי מילים שקל מדי לנחש\n• בערך 3 דקות\n\nהמילים שלמדת וההתקדמות שלך נשמרות."
+      },
+      "button": {
+        "fr": "Refaire le test de niveau",
+        "he": "לעשות שוב את מבחן הרמה"
+      },
+      "icon": "target",
+      "action": "placement"
     }
   ]
 }
