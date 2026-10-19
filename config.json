@@ -1,6 +1,6 @@
 {
   "update": {
-    "force": true,
+    "force": false,
     "minimumVersion": {
       "ios": null,
       "android": null
