@@ -27,13 +27,13 @@ section + section { margin-top:4rem; padding-top:1rem; border-top:3px solid var(
 <nav aria-label="Language / Langue"><a href="#fr" hreflang="fr">Français</a><a href="#en" hreflang="en">English</a></nav>
 <section id="fr" lang="fr">
 <h1>Politique de confidentialité : Native IPTV</h1>
-<p><em>Dernière mise à jour : 13 octobre 2026.</em></p>
+<p><em>Dernière mise à jour : 19 octobre 2026.</em></p>
 <p><strong>Native IPTV</strong> (« l'app ») est un lecteur de flux IPTV pour Apple TV, iPhone et Mac. Elle ne fournit aucun contenu : vous y ajoutez votre propre abonnement.</p>
 <h2>En bref</h2>
 <ul>
 <li><strong>Aucun compte, aucune publicité, aucun suivi.</strong> L'app n'utilise ni outil d'analyse, ni traceur, ni régie publicitaire, et ne vend aucune donnée.</li>
 <li><strong>L'éditeur n'a aucun serveur</strong> et ne reçoit aucune de vos données. Tout reste sur vos appareils et dans votre iCloud privé, que l'éditeur ne peut pas lire.</li>
-<li>Pour fonctionner, l'app échange des données avec <strong>trois sortes de tiers</strong>, détaillées ci-dessous : votre fournisseur IPTV (que vous choisissez), TMDB (affiches, fiches des films et recherche de personnes) et YouTube (vignettes des bandes-annonces).</li>
+<li>Pour fonctionner, l'app échange des données avec <strong>quelques tiers</strong>, détaillés ci-dessous : votre fournisseur IPTV, ou vos propres serveurs multimédias et partages de fichiers (que vous choisissez), TMDB (affiches, fiches des films et recherche de personnes), YouTube (vignettes des bandes-annonces) et, selon vos réglages, IntroDB (passer l'intro et le générique) et le catalogue public de logos iptv-org (logos des chaînes).</li>
 </ul>
 <h2>1. Qui est responsable</h2>
 <p>L'éditeur de l'app : <strong>Samuel Binisti</strong>, joignable à <strong>samuel.binisti@gmail.com</strong>.</p>
@@ -41,47 +41,56 @@ section + section { margin-top:4rem; padding-top:1rem; border-top:3px solid var(
 <h2>2. Ce que l'app enregistre, et où</h2>
 <h3>Sur votre appareil</h3>
 <ul>
-<li><strong>Vos sources</strong> : nom, adresse du serveur, identifiant et mot de passe de votre abonnement IPTV (ou adresse de votre playlist M3U). Les identifiants sont conservés dans le <strong>Trousseau</strong> de l'appareil.</li>
+<li><strong>Vos sources</strong> : nom, adresse du serveur, identifiant et mot de passe de votre abonnement IPTV (ou adresse de votre playlist M3U), de votre serveur multimédia (Jellyfin, Emby, Plex) ou de votre partage de fichiers (SMB, WebDAV, FTP, DLNA). Les identifiants et jetons d'accès sont conservés dans le <strong>Trousseau</strong> de l'appareil.</li>
 <li><strong>Vos profils</strong> et pour chacun : favoris, liste de lecture, progression de lecture, historique « récemment regardés », réglages.</li>
+<li><strong>Native IPTV Pro</strong> : l'état de votre achat, tel que l'App Store le confirme, et le temps de lecture gratuite utilisé dans la journée.</li>
+<li><strong>Vos rappels de programmes</strong> (notifications locales sur iPhone et Mac).</li>
 <li><strong>Vos recherches récentes</strong> (dix au plus), gardées sur l'appareil uniquement.</li>
 <li><strong>Des copies temporaires</strong> : catalogue de votre source, guide des programmes, images, informations TMDB (caches), journaux de diagnostic locaux (jamais d'adresse de flux ni d'identifiant).</li>
 <li><strong>Vos téléchargements</strong>, sur iPhone et Mac.</li>
 </ul>
 <p>Ces données ne quittent l'appareil que dans les cas décrits ci-dessous.</p>
 <h3>Dans votre iCloud privé (synchronisation)</h3>
-<p>Si iCloud est activé pour l'app, vos profils, favoris, liste de lecture, progression, réglages et sources sont synchronisés entre vos appareils dans la <strong>base privée</strong> CloudKit de votre compte Apple. Les identifiants de vos abonnements y sont stockés dans des champs <strong>chiffrés de bout en bout</strong> (illisibles par Apple comme par l'éditeur). L'éditeur n'y a pas accès. Apple traite ces données selon sa propre politique (apple.com/legal/privacy). Vous pouvez désactiver cette synchronisation dans les Réglages de l'app ou d'iCloud.</p>
+<p>Si iCloud est activé pour l'app, vos profils, favoris, liste de lecture, progression, réglages et sources sont synchronisés entre vos appareils dans la <strong>base privée</strong> CloudKit de votre compte Apple. Les identifiants de vos abonnements y sont stockés dans des champs <strong>chiffrés de bout en bout</strong> (illisibles par Apple comme par l'éditeur). L'éditeur n'y a pas accès. Apple traite ces données selon sa propre politique (apple.com/legal/privacy). Vous pouvez désactiver cette synchronisation dans les Réglages de l'app ou d'iCloud. Le temps de lecture gratuite du jour (un simple compteur par appareil, sans aucun titre) est aussi gardé dans le stockage clé-valeur iCloud de votre compte, pour que la limite gratuite soit la même sur vos appareils.</p>
 <h2>3. Ce que l'app envoie à des tiers</h2>
 <h3>Votre fournisseur IPTV</h3>
 <p>L'app se connecte <strong>directement</strong> au serveur que vous avez indiqué, avec vos identifiants, pour charger vos chaînes, films, séries et le guide, et pour lire les flux. Votre fournisseur voit l'adresse IP de l'appareil et ce que vous regardez. Sa propre politique de confidentialité s'applique ; l'éditeur de l'app n'est lié à aucun fournisseur. Selon l'adresse saisie, la connexion peut être en <code>http://</code> (non chiffrée) : c'est un choix de votre fournisseur.</p>
+<h3>Vos serveurs multimédias et partages de fichiers</h3>
+<p>Si vous ajoutez un serveur <strong>Jellyfin</strong>, <strong>Emby</strong> ou <strong>Plex</strong>, ou un partage de fichiers (<strong>SMB</strong>, <strong>WebDAV</strong>, <strong>FTP</strong>, <strong>DLNA</strong>), l'app s'y connecte <strong>directement</strong>, le plus souvent sur votre réseau local (d'où la demande d'accès au réseau local), avec le compte que vous avez saisi. Elle lui indique un identifiant d'appareil <strong>aléatoire</strong>, propre à cette installation, et votre avancement de lecture. Pour Plex, la connexion par code passe par <strong>plex.tv</strong> (Plex Inc.), qui reçoit ce même identifiant aléatoire et renvoie l'adresse de vos serveurs ; la politique de Plex s'applique (plex.tv/about/privacy-legal).</p>
 <h3>TMDB (The Movie Database)</h3>
 <p>Pour afficher affiches, synopsis, distribution, notes et bandes-annonces, l'app interroge l'API de <strong>TMDB</strong> (themoviedb.org) avec les <strong>titres et années</strong> des éléments de votre catalogue que vous parcourez ou ouvrez, ainsi que les noms de personnes de la distribution que vous consultez. <strong>Recherche</strong> : le texte que vous tapez dans la Recherche (au moins deux caractères, à chaque pause de frappe) est envoyé à TMDB pour trouver des personnes (acteurs, réalisateurs), quel que soit le filtre choisi (tout, films, séries, chaînes) ; TMDB renvoie la personne la plus proche, dont les films et séries présents dans votre catalogue sont ajoutés à vos résultats. Les titres et les chaînes sont, eux, recherchés sur l'appareil, et vos recherches récentes restent sur l'appareil. TMDB reçoit aussi l'<strong>adresse IP</strong> de l'appareil et la langue de l'app. Aucun identifiant d'abonnement ni aucune adresse de flux n'est envoyé à TMDB. Politique de TMDB : themoviedb.org/privacy-policy. <em>Ce produit utilise l'API TMDB mais n'est ni approuvé ni certifié par TMDB.</em></p>
 <h3>YouTube (Google)</h3>
 <p>Les <strong>vignettes</strong> des bandes-annonces sont chargées depuis <code>img.youtube.com</code> : YouTube reçoit l'adresse IP de l'appareil et l'identifiant de la vidéo. Quand vous ouvrez une bande-annonce, elle s'ouvre dans l'<strong>app YouTube</strong> (ou le navigateur), hors de l'app : les règles de Google s'appliquent alors (policies.google.com/privacy).</p>
+<h3>IntroDB (passer l'intro, le récap et le générique)</h3>
+<p>Quand un film ou un épisode que vous lancez ne porte pas ses propres repères (titres de votre fournisseur IPTV ou de vos partages de fichiers ; les serveurs Jellyfin, Emby et Plex fournissent les leurs), l'app demande à la base communautaire <strong>IntroDB</strong> (introdb.app) où se trouvent l'intro, le récap et le générique. Elle envoie l'<strong>identifiant IMDb</strong> du titre (que TMDB lui donne à partir de l'identifiant TMDB) et, pour un épisode, les numéros de saison et d'épisode. IntroDB reçoit aussi l'<strong>adresse IP</strong> de l'appareil et le nom de l'app. Aucun identifiant d'abonnement, aucune adresse de flux ni aucun identifiant d'appareil ne lui est envoyé. Aucune demande n'est faite pour les chaînes en direct et le replay, ni quand les réglages « Intro et récap » et « Générique de fin » sont tous deux sur « Jamais ». Conditions d'IntroDB : introdb.app/docs/terms.</p>
+<h3>Logos des chaînes (iptv-org)</h3>
+<p>Quand le réglage « Logos des chaînes » utilise les logos de l'app (c'est le cas par défaut pour les chaînes dont la source n'a pas de logo), l'app télécharge au plus une fois par semaine le catalogue public de logos <strong>iptv-org</strong> (iptv-org.github.io, hébergé par GitHub). La demande ne contient rien sur vous : GitHub reçoit seulement l'adresse IP de l'appareil. L'association entre vos chaînes et les logos se fait sur l'appareil : la liste de vos chaînes ne le quitte pas. Les images des logos sont ensuite chargées, en HTTPS, depuis les sites qui les hébergent (par exemple Wikimedia Commons, Imgur ou le site de la chaîne), qui reçoivent l'adresse IP de l'appareil et l'adresse de l'image, comme pour les logos fournis par votre source. Avec « Ceux de la source », et si vous n'avez choisi le logo de l'app pour aucune chaîne, ce catalogue n'est pas téléchargé (sauf à l'ouverture de « Logo de la chaîne… », qui en montre l'aperçu).</p>
 <h3>Applications externes</h3>
 <p>Si vous choisissez de lire un titre dans une autre app (<strong>Infuse</strong>, <strong>VLC</strong>), l'adresse du flux, qui peut contenir vos identifiants, lui est transmise ; cette app a sa propre politique. Par défaut, la lecture reste dans Native IPTV.</p>
 <h3>Apple</h3>
-<p>Le téléchargement de l'app, iCloud et, si vous les avez activés, les rapports d'analyse et de plantage de l'appareil sont gérés par Apple, pas par l'éditeur.</p>
+<p>Le téléchargement de l'app, iCloud et, si vous les avez activés, les rapports d'analyse et de plantage de l'appareil sont gérés par Apple, pas par l'éditeur. Les achats de <strong>Native IPTV Pro</strong> sont traités par l'App Store : l'éditeur ne reçoit ni votre identité ni vos moyens de paiement.</p>
 <h2>4. Ce que l'app ne fait pas</h2>
 <p>Pas de compte à créer, pas de publicité, pas de suivi entre apps ou sites, pas d'outil statistique, pas de vente ni de partage de données à des fins commerciales, pas de géolocalisation, pas d'accès à vos contacts, photos ou micro.</p>
 <h2>5. Bases légales et conservation</h2>
 <ul>
 <li>Le fonctionnement local de l'app et l'accès à votre fournisseur reposent sur <strong>votre demande</strong> (vous ajoutez la source, vous ouvrez un titre).</li>
 <li>Les échanges avec TMDB et YouTube sont <strong>nécessaires à l'affichage</strong> des fiches et des vignettes et à la recherche de personnes ; ils peuvent être évités en n'ouvrant pas les fiches, en ne saisissant pas de texte dans la Recherche ou en coupant l'accès réseau à ces services.</li>
+<li>Les demandes à IntroDB et au catalogue de logos sont <strong>nécessaires</strong> aux fonctions « passer l'intro » et « logos des chaînes » ; elles sont évitées en réglant « Intro et récap » et « Générique de fin » sur « Jamais », et « Logos des chaînes » sur « Ceux de la source ».</li>
 <li>Les données locales sont conservées <strong>jusqu'à ce que vous les supprimiez</strong> (voir « Vos droits »). Les caches sont temporaires et se vident (Réglages ▸ Général ▸ Effacer le cache). Les données iCloud restent dans votre compte jusqu'à suppression.</li>
 </ul>
 <h2>6. Vos droits (RGPD)</h2>
 <p>Vous pouvez à tout moment <strong>accéder</strong> à vos données (elles sont visibles dans l'app), les <strong>rectifier</strong> (modifier une source, un profil), les <strong>effacer</strong>, <strong>limiter</strong> ou vous <strong>opposer</strong> à leur traitement, et demander leur <strong>portabilité</strong>.</p>
 <ul>
 <li><strong>Tout supprimer</strong> : « Supprimer toutes mes données » dans les Réglages de l'app efface les sources, identifiants, profils, favoris, listes, progression, réglages, caches et téléchargements de cet appareil, et les données de l'app dans votre iCloud privé. Désinstaller l'app supprime les données locales.</li>
-<li><strong>Une demande</strong> : écrivez à <strong>samuel.binisti@gmail.com</strong>. L'éditeur ne détenant aucune de vos données, il vous indiquera comment les exercer auprès des tiers concernés (TMDB, Google, votre fournisseur, Apple).</li>
+<li><strong>Une demande</strong> : écrivez à <strong>samuel.binisti@gmail.com</strong>. L'éditeur ne détenant aucune de vos données, il vous indiquera comment les exercer auprès des tiers concernés (TMDB, Google, IntroDB, GitHub, votre fournisseur, Apple).</li>
 <li><strong>Réclamation</strong> : vous pouvez saisir l'autorité de protection des données de votre pays (en France : la CNIL, cnil.fr).</li>
 </ul>
 <h2>7. Enfants</h2>
 <p>L'app ne s'adresse pas spécifiquement aux enfants et ne collecte aucune donnée sur eux. Le contrôle des contenus lus dépend de votre fournisseur.</p>
 <h2>8. Transferts hors de l'Union européenne</h2>
-<p>TMDB et Google peuvent traiter des données hors de l'Union européenne ; ces échanges se font à votre initiative et selon leurs propres garanties. Ils se limitent à ceux décrits au point 3.</p>
+<p>TMDB, Google, IntroDB, GitHub (Microsoft) et les sites qui hébergent les logos peuvent traiter des données hors de l'Union européenne ; ces échanges se font à votre initiative et selon leurs propres garanties. Ils se limitent à ceux décrits au point 3.</p>
 <h2>9. Sécurité</h2>
-<p>Les échanges avec TMDB et YouTube sont chiffrés (HTTPS). Vos identifiants sont dans le Trousseau. Les échanges avec votre fournisseur dépendent de l'adresse qu'il vous a donnée (HTTP ou HTTPS).</p>
+<p>Les échanges avec TMDB, YouTube, IntroDB et le catalogue de logos, ainsi que le chargement des logos de l'app, sont chiffrés (HTTPS). Vos identifiants sont dans le Trousseau. Les échanges avec votre fournisseur dépendent de l'adresse qu'il vous a donnée (HTTP ou HTTPS).</p>
 <h2>10. Modifications</h2>
 <p>Cette politique peut évoluer ; la date de mise à jour figure en haut de la page et la version à jour est toujours celle de l'adresse indiquée dans l'app (Réglages ▸ Général ▸ Mentions légales ▸ Confidentialité).</p>
 <h2>11. Contact</h2>
@@ -89,13 +98,13 @@ section + section { margin-top:4rem; padding-top:1rem; border-top:3px solid var(
 </section>
 <section id="en" lang="en">
 <h1>Privacy Policy: Native IPTV</h1>
-<p><em>Last updated: October 13, 2026.</em></p>
+<p><em>Last updated: October 19, 2026.</em></p>
 <p><strong>Native IPTV</strong> ("the app") is an IPTV stream player for Apple TV, iPhone and Mac. It provides no content: you add your own subscription.</p>
 <h2>In short</h2>
 <ul>
 <li><strong>No account, no ads, no tracking.</strong> The app uses no analytics tool, no tracker and no ad network, and sells no data.</li>
 <li><strong>The publisher runs no server</strong> and receives none of your data. Everything stays on your devices and in your private iCloud, which the publisher cannot read.</li>
-<li>To work, the app exchanges data with <strong>three kinds of third parties</strong>, detailed below: your IPTV provider (which you choose), TMDB (movie posters, details and people search) and YouTube (trailer thumbnails).</li>
+<li>To work, the app exchanges data with <strong>a few third parties</strong>, detailed below: your IPTV provider, or your own media servers and file shares (which you choose), TMDB (movie posters, details and people search), YouTube (trailer thumbnails) and, depending on your settings, IntroDB (skipping intros and credits) and the public iptv-org logo catalog (channel logos).</li>
 </ul>
 <h2>1. Who is responsible</h2>
 <p>The app's publisher: <strong>Samuel Binisti</strong>, reachable at <strong>samuel.binisti@gmail.com</strong>.</p>
@@ -103,47 +112,56 @@ section + section { margin-top:4rem; padding-top:1rem; border-top:3px solid var(
 <h2>2. What the app stores, and where</h2>
 <h3>On your device</h3>
 <ul>
-<li><strong>Your sources</strong>: name, server address, username and password of your IPTV subscription (or your M3U playlist address). Credentials are kept in the device <strong>Keychain</strong>.</li>
+<li><strong>Your sources</strong>: name, server address, username and password of your IPTV subscription (or your M3U playlist address), of your media server (Jellyfin, Emby, Plex) or of your file share (SMB, WebDAV, FTP, DLNA). Credentials and access tokens are kept in the device <strong>Keychain</strong>.</li>
 <li><strong>Your profiles</strong> and, for each: favorites, watchlist, playback progress, recently watched history, settings.</li>
+<li><strong>Native IPTV Pro</strong>: the state of your purchase, as confirmed by the App Store, and the free playback time used during the day.</li>
+<li><strong>Your programme reminders</strong> (local notifications on iPhone and Mac).</li>
 <li><strong>Your recent searches</strong> (ten at most), kept on the device only.</li>
 <li><strong>Temporary copies</strong>: your source's catalog, program guide, images, TMDB information (caches), local diagnostic logs (never a stream address or a credential).</li>
 <li><strong>Your downloads</strong>, on iPhone and Mac.</li>
 </ul>
 <p>This data leaves the device only in the cases described below.</p>
 <h3>In your private iCloud (sync)</h3>
-<p>If iCloud is on for the app, your profiles, favorites, watchlist, progress, settings and sources are synced between your devices in the <strong>private</strong> CloudKit database of your Apple account. Your subscription credentials are stored there in <strong>end-to-end encrypted</strong> fields (readable neither by Apple nor by the publisher). The publisher has no access to it. Apple processes it under its own policy (apple.com/legal/privacy). You can turn this sync off in the app's Settings or in iCloud.</p>
+<p>If iCloud is on for the app, your profiles, favorites, watchlist, progress, settings and sources are synced between your devices in the <strong>private</strong> CloudKit database of your Apple account. Your subscription credentials are stored there in <strong>end-to-end encrypted</strong> fields (readable neither by Apple nor by the publisher). The publisher has no access to it. Apple processes it under its own policy (apple.com/legal/privacy). You can turn this sync off in the app's Settings or in iCloud. The free playback time of the day (a plain counter per device, with no title) is also kept in your account's iCloud key-value storage, so that the free limit is the same on your devices.</p>
 <h2>3. What the app sends to third parties</h2>
 <h3>Your IPTV provider</h3>
 <p>The app connects <strong>directly</strong> to the server you entered, with your credentials, to load your channels, movies, series and guide, and to play streams. Your provider sees the device's IP address and what you watch. Its own privacy policy applies; the app's publisher is not tied to any provider. Depending on the address you enter, the connection may be <code>http://</code> (unencrypted): that is your provider's choice.</p>
+<h3>Your media servers and file shares</h3>
+<p>If you add a <strong>Jellyfin</strong>, <strong>Emby</strong> or <strong>Plex</strong> server, or a file share (<strong>SMB</strong>, <strong>WebDAV</strong>, <strong>FTP</strong>, <strong>DLNA</strong>), the app connects to it <strong>directly</strong>, usually on your local network (hence the local network permission request), with the account you entered. It gives it a <strong>random</strong> device identifier, specific to this installation, and your playback progress. For Plex, sign-in with a code goes through <strong>plex.tv</strong> (Plex Inc.), which receives the same random identifier and returns the address of your servers; Plex's policy applies (plex.tv/about/privacy-legal).</p>
 <h3>TMDB (The Movie Database)</h3>
 <p>To show posters, synopses, cast, ratings and trailers, the app queries the <strong>TMDB</strong> API (themoviedb.org) with the <strong>titles and years</strong> of the catalog items you browse or open, and the names of cast members you look up. <strong>Search</strong>: the text you type in Search (at least two characters, at each pause in typing) is sent to TMDB to find people (actors, directors), whatever filter is selected (all, movies, series, channels); TMDB returns the closest people, and their movies and series found in your catalog are added to your results. Titles and channels are searched on the device itself, and your recent searches stay on the device. TMDB also receives the device's <strong>IP address</strong> and the app's language. No subscription credential and no stream address is sent to TMDB. TMDB's policy: themoviedb.org/privacy-policy. <em>This product uses the TMDB API but is not endorsed or certified by TMDB.</em></p>
 <h3>YouTube (Google)</h3>
 <p>Trailer <strong>thumbnails</strong> are loaded from <code>img.youtube.com</code>: YouTube receives the device's IP address and the video identifier. When you open a trailer, it opens in the <strong>YouTube app</strong> (or the browser), outside this app: Google's rules then apply (policies.google.com/privacy).</p>
+<h3>IntroDB (skipping the intro, recap and credits)</h3>
+<p>When a movie or episode you start carries no markers of its own (titles from your IPTV provider or your file shares; Jellyfin, Emby and Plex servers provide theirs), the app asks the community database <strong>IntroDB</strong> (introdb.app) where the intro, recap and credits are. It sends the title's <strong>IMDb identifier</strong> (which TMDB gives it from the TMDB identifier) and, for an episode, the season and episode numbers. IntroDB also receives the device's <strong>IP address</strong> and the app's name. No subscription credential, stream address or device identifier is sent to it. No request is made for live channels and replays, nor when the "Intro and Recap" and "End Credits" settings are both set to "Never". IntroDB's terms: introdb.app/docs/terms.</p>
+<h3>Channel logos (iptv-org)</h3>
+<p>When the "Channel Logos" setting uses the app's logos (the default for channels whose source has no logo), the app downloads the public <strong>iptv-org</strong> logo catalog (iptv-org.github.io, hosted by GitHub) at most once a week. The request contains nothing about you: GitHub only receives the device's IP address. Your channels are matched with the logos on the device: your channel list never leaves it. The logo images are then loaded, over HTTPS, from the sites that host them (for example Wikimedia Commons, Imgur or the channel's website), which receive the device's IP address and the image address, as with the logos your source provides. With "The Source's Logos", and if you have not picked the app's logo for any channel, the catalog is not downloaded (except when you open "Channel Logo…", which previews it).</p>
 <h3>External apps</h3>
 <p>If you choose to play a title in another app (<strong>Infuse</strong>, <strong>VLC</strong>), the stream address, which may contain your credentials, is passed to it; that app has its own policy. By default, playback stays inside Native IPTV.</p>
 <h3>Apple</h3>
-<p>Downloading the app, iCloud and, if you turned them on, device analytics and crash reports are handled by Apple, not by the publisher.</p>
+<p>Downloading the app, iCloud and, if you turned them on, device analytics and crash reports are handled by Apple, not by the publisher. <strong>Native IPTV Pro</strong> purchases are processed by the App Store: the publisher receives neither your identity nor your payment details.</p>
 <h2>4. What the app does not do</h2>
 <p>No account to create, no ads, no tracking across apps or sites, no statistics tool, no sale or sharing of data for commercial purposes, no location, no access to your contacts, photos or microphone.</p>
 <h2>5. Legal bases and retention</h2>
 <ul>
 <li>The app's local operation and access to your provider rest on <strong>your request</strong> (you add the source, you open a title).</li>
 <li>Exchanges with TMDB and YouTube are <strong>necessary to display</strong> details and thumbnails and to search for people; you can avoid them by not opening detail pages, by not typing text in Search, or by blocking network access to those services.</li>
+<li>Requests to IntroDB and to the logo catalog are <strong>necessary</strong> for the "skip intro" and "channel logos" features; you avoid them by setting "Intro and Recap" and "End Credits" to "Never", and "Channel Logos" to "The Source's Logos".</li>
 <li>Local data is kept <strong>until you delete it</strong> (see "Your rights"). Caches are temporary and can be cleared (Settings ▸ General ▸ Clear Cache). iCloud data stays in your account until deleted.</li>
 </ul>
 <h2>6. Your rights (GDPR)</h2>
 <p>At any time you can <strong>access</strong> your data (it is visible in the app), <strong>correct</strong> it (edit a source or profile), <strong>erase</strong> it, <strong>restrict</strong> or <strong>object to</strong> its processing, and request its <strong>portability</strong>.</p>
 <ul>
 <li><strong>Delete everything</strong>: "Delete All My Data" in the app's Settings erases the sources, credentials, profiles, favorites, lists, progress, settings, caches and downloads of this device, and the app's data in your private iCloud. Uninstalling the app removes local data.</li>
-<li><strong>A request</strong>: write to <strong>samuel.binisti@gmail.com</strong>. Since the publisher holds none of your data, it will tell you how to exercise your rights with the third parties concerned (TMDB, Google, your provider, Apple).</li>
+<li><strong>A request</strong>: write to <strong>samuel.binisti@gmail.com</strong>. Since the publisher holds none of your data, it will tell you how to exercise your rights with the third parties concerned (TMDB, Google, IntroDB, GitHub, your provider, Apple).</li>
 <li><strong>Complaint</strong>: you may contact the data protection authority of your country (in France: the CNIL, cnil.fr).</li>
 </ul>
 <h2>7. Children</h2>
 <p>The app is not aimed specifically at children and collects no data about them. Control of the content played depends on your provider.</p>
 <h2>8. Transfers outside the European Union</h2>
-<p>TMDB and Google may process data outside the European Union; these exchanges happen at your initiative and under their own safeguards. They are limited to those described in section 3.</p>
+<p>TMDB, Google, IntroDB, GitHub (Microsoft) and the sites hosting the logos may process data outside the European Union; these exchanges happen at your initiative and under their own safeguards. They are limited to those described in section 3.</p>
 <h2>9. Security</h2>
-<p>Exchanges with TMDB and YouTube are encrypted (HTTPS). Your credentials are in the Keychain. Exchanges with your provider depend on the address it gave you (HTTP or HTTPS).</p>
+<p>Exchanges with TMDB, YouTube, IntroDB and the logo catalog, and the loading of the app's logos, are encrypted (HTTPS). Your credentials are in the Keychain. Exchanges with your provider depend on the address it gave you (HTTP or HTTPS).</p>
 <h2>10. Changes</h2>
 <p>This policy may change; the update date is at the top of the page and the current version is always the one at the address shown in the app (Settings ▸ General ▸ Legal ▸ Privacy).</p>
 <h2>11. Contact</h2>
