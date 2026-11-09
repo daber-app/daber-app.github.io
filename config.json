@@ -43,6 +43,31 @@
       },
       "icon": "target",
       "action": "placement"
+    },
+    {
+      "id": "bienvenue-1.2.0",
+      "type": "update",
+      "version": "1.2.0",
+      "title": {
+        "fr": "Bienvenue dans la mise à jour 1.2 !",
+        "he": "ברוכים הבאים לעדכון 1.2!",
+        "en": "Welcome to version 1.2!",
+        "ru": "Добро пожаловать в версию 1.2!"
+      },
+      "body": {
+        "fr": "Quoi de neuf ?\n\n• Toutes les leçons de grammaire sont réécrites : 99 leçons, de l'Alef au Dalet, avec des exercices variés\n• 600 nouveaux mots de la vie en Israël\n• Les mots les plus fréquents arrivent en premier\n• Daber est maintenant aussi en anglais et en russe\n\nTes mots appris et ta progression sont conservés.",
+        "he": "מה חדש?\n\n• כל שיעורי הדקדוק נכתבו מחדש: 99 שיעורים, מאל״ף ועד דל״ת, עם תרגילים מגוונים\n• 600 מילים חדשות מהחיים בישראל\n• המילים הנפוצות ביותר מגיעות קודם\n• Daber זמינה עכשיו גם באנגלית וברוסית\n\nהמילים שלמדת וההתקדמות שלך נשמרות.",
+        "en": "What's new?\n\n• All grammar lessons have been rewritten: 99 lessons, from Aleph to Dalet, with varied exercises\n• 600 new words from everyday life in Israel\n• The most frequent words come first\n• Daber is now available in English and Russian\n\nYour learned words and progress are kept.",
+        "ru": "Что нового?\n\n• Все уроки грамматики переписаны: 99 уроков, от Алефа до Далета, с разными упражнениями\n• 600 новых слов из жизни в Израиле\n• Самые частые слова идут первыми\n• Daber теперь доступен на английском и русском\n\nВыученные слова и твой прогресс сохранены."
+      },
+      "button": {
+        "fr": "Voir les leçons",
+        "he": "לשיעורים",
+        "en": "See the lessons",
+        "ru": "К урокам"
+      },
+      "icon": "sparkles",
+      "action": "tab:grammar"
     }
   ]
 }
