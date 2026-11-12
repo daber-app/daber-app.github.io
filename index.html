@@ -52,16 +52,19 @@
 
   <section id="confidentialite">
     <h2>Confidentialité</h2>
-    <p>Daber ne collecte aucune donnée personnelle. Pas de compte, pas de publicité, pas de traceur.</p>
+    <p>Daber ne collecte aucune donnée personnelle, sauf si tu choisis d'utiliser le classement entre amis. Pas de compte, pas de publicité, pas de traceur.</p>
     <ul>
       <li><strong>Ta progression</strong> (mots appris, révisions, réglages) reste sur ton téléphone. Si iCloud (iPhone) ou la sauvegarde Google (Android) est activé, elle est aussi sauvegardée dans ton propre compte pour la retrouver sur un autre appareil : Daber n'y a pas accès.</li>
       <li><strong>Les achats</strong> sont gérés par Apple ou Google : Daber ne voit jamais tes informations de paiement, seulement si un abonnement est actif.</li>
       <li><strong>La prononciation</strong> utilise le micro et la reconnaissance vocale du système (Apple ou Google), seulement quand tu touches le micro. L'audio est traité par Apple ou Google pour être transcrit (sur ton téléphone quand c'est possible, sinon par leurs serveurs), puis aussitôt oublié : il n'est ni enregistré ni envoyé à Daber.</li>
       <li><strong>Les mises à jour et les messages</strong> : Daber demande à l'App Store ou à Google Play si une nouvelle version existe, et télécharge un petit fichier public d'informations (messages, version minimale) sur ce site. Ces requêtes n'envoient ni identifiant ni donnée personnelle ; comme toute page web, l'hébergeur (GitHub) peut voir l'adresse IP de la requête.</li>
+      <li><strong>Le classement entre amis (facultatif)</strong> : la carte « Mes amis » de « Ma progression » n'envoie rien tant que tu ne crées pas de profil. Si tu en crées un, Daber enregistre sur son serveur (hébergé par Cloudflare) ton <strong>pseudo</strong> (vu seulement par tes amis), ton <strong>nombre de mots appris</strong> et ta <strong>série de jours</strong> (avec un instantané par jour, gardé 30 jours, pour les « mots sur 7 jours »), un <strong>identifiant aléatoire</strong>, ton <strong>code ami</strong> et la <strong>liste de tes amis</strong>, plus l'empreinte d'un jeton secret (le jeton reste dans le trousseau de ton téléphone). Rien d'autre : ni e-mail, ni téléphone, ni contacts, ni localisation, ni identifiant publicitaire. Ces données servent seulement au classement : ni vendues, ni partagées, ni utilisées pour la publicité. Elles sont envoyées chiffrées (HTTPS). Cloudflare voit l'adresse IP de la requête pour la transmettre ; Daber ne la garde pas (seule une empreinte salée sert quelques heures à freiner les abus). Pour tout effacer : « Mes amis » › « … » › « Supprimer mes données du classement ». Un profil sans mise à jour depuis 12 mois est supprimé automatiquement. Tu peux aussi demander la suppression par e-mail avec ton code ami. Quelqu'un qui connaît ton code ami peut voir ton pseudo, tes mots appris et ta série : ne le partage qu'avec des personnes de confiance.</li>
       <li><strong>Les rappels</strong> sont des notifications locales, programmées sur ton appareil. Tu peux les désactiver dans les réglages.</li>
       <li>Supprimer l'app efface toutes ses données de l'appareil.</li>
     </ul>
-    <p class="he">דבר לא אוסף שום מידע אישי: אין חשבון, אין פרסומות ואין מעקב. ההתקדמות נשמרת במכשיר שלך (ובגיבוי האישי שלך, אם הוא מופעל).</p>
+    <p class="he">דבר לא אוסף שום מידע אישי, אלא אם בחרת להשתמש בטבלת החברים (כינוי, מספר מילים ורצף ימים בלבד): אין חשבון, אין פרסומות ואין מעקב. ההתקדמות נשמרת במכשיר שלך (ובגיבוי האישי שלך, אם הוא מופעל).</p>
+    <p lang="en"><strong>English.</strong> Daber collects no personal data, unless you choose to use the optional friends leaderboard. If you create a profile there, Daber's server (hosted by Cloudflare) stores your nickname, your number of learned words and day streak (one daily snapshot kept 30 days), a random identifier, your friend code, your friends list and a fingerprint of a secret token. No e-mail, phone number, contacts, location or advertising ID. This data is only used for the leaderboard, never sold, shared or used for advertising, and is sent over HTTPS. You can delete it at any time in the « Mes amis » card › « … »; profiles without updates for 12 months are deleted automatically. Your learning progress stays on your device (and in your own iCloud / Google backup if enabled). Purchases are handled by Apple or Google.</p>
+    <p lang="ru"><strong>Русский.</strong> Daber не собирает личные данные, если вы не пользуетесь необязательным рейтингом друзей. Если вы создадите там профиль, сервер Daber (хостинг Cloudflare) хранит ваш псевдоним, число выученных слов и серию дней (по одному снимку в день, 30 дней), случайный идентификатор, код друга, список друзей и отпечаток секретного токена. Никаких e-mail, телефона, контактов, местоположения или рекламного идентификатора. Эти данные используются только для рейтинга, не продаются, не передаются и не используются для рекламы; передаются по HTTPS. Удалить их можно в любой момент: карточка «Mes amis» › «…»; профили без обновлений 12 месяцев удаляются автоматически. Ваш прогресс хранится на устройстве (и в вашей резервной копии iCloud / Google, если она включена). Покупки обрабатывают Apple или Google.</p>
   </section>
 
   <section id="contact">
@@ -69,7 +72,7 @@
     <p>Une question, un bug, une idée : <a href="mailto:samuel.binisti@gmail.com">samuel.binisti@gmail.com</a>, ou dans l'app : Réglages › Donner mon avis.</p>
   </section>
 
-  <footer><a href="https://getdaber.app/">getdaber.app</a> · Daber · mise à jour le 11 novembre 2026</footer>
+  <footer><a href="https://getdaber.app/">getdaber.app</a> · Daber · mise à jour le 12 novembre 2026</footer>
 </main>
 </body>
 </html>
